@@ -5,7 +5,7 @@
         - [create IAM role](#create-iam-role)
         - [create keypair (to gain ssh access to EC2 instances)](#create-keypair-to-gain-ssh-access-to-ec2-instances)
         - [Create user "eksuser"](#create-user-eksuser) 
-	- [create API Access key/secret](#create-api-access-key-secret)  
+        - [create API Access key/secret](#create-api-access-key-secret)  
 - [Terraform and AWS credentials](#terraform-and-aws-credentials)
 - [VPC Peering and Direct Connect](#vpc-peering-and-direct-connect)
 - [Links of interest](#links-of-interest)
