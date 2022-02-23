@@ -3,9 +3,9 @@
 - [IAM Roles and policies. Prerequisites](#iam-roles-and-policies-prerequisites)
     - [IAM user and permissions](#iam-user-and-permissions)
         - [create IAM role](#create-iam-role)
-        - [create keypair (to gain ssh access to EC2 instances)](#create-keypair-to-gain-ssh-access-to-ec2-instances)
         - [create API Access key/-secret](#create-api-access-key-secret)
         - [Create user "eksuser"](#create-user-eksuser)
+        - [create keypair (to gain ssh access to EC2 instances)](#create-keypair-to-gain-ssh-access-to-ec2-instances)
 - [Terraform and AWS credentials](#terraform-and-aws-credentials)
 - [VPC Peering and Direct Connect](#vpc-peering-and-direct-connect)
 - [Links of interest](#links-of-interest)
@@ -92,15 +92,15 @@ Finally, assign the following policies to your IAM Group you are going to use:
 * provide name for keypair, "eks" and click *_Create_*
 * !! the keypair will be downloaded immediately => file *eks.pem* !!
 
-#### create API Access key/-secret
-* create key+secret via AWS console
-  AWS-console => IAM => Users => "your user" => tab *Security credentials* => button *Create access key*
-
 #### Create user "eksuser"
 * Create "eksuser" assigned to "EksUsers" Group. 
 * Create "EksUsers" group with the following policies/permissions:
 	* AmazonEKSClusterPolicy
     * AmazonEKSServicePolicy
+
+#### create API Access key/-secret
+* create key+secret via AWS console
+  AWS-console => IAM => Users => "eksuser" => tab *Security credentials* => button *Create access key*
 
 ## Terraform and AWS credentials
 This terraform template requires the permissions of the above described "eksadmin" user (inherited by the eksadmin group). Make sure your aws credentials (like i.e. 'aws configure') keep the same aws user identity during the whole EKS lifecycle with terraform (apply, update, destroy). 
