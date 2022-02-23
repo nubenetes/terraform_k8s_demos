@@ -94,7 +94,7 @@ Finally, assign the following policies to your IAM Group you are going to use:
 
 #### create API Access key/-secret
 * create key+secret via AWS console
-  AWS-console => IAM => Users => <your user> => tab *Security credentials* => button *Create access key*
+  AWS-console => IAM => Users => "your user" => tab *Security credentials* => button *Create access key*
 
 #### Create user "eksuser"
 * Create "eksuser" assigned to "EksUsers" Group. 
